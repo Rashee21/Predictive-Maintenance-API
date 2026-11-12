@@ -1,0 +1,130 @@
+{
+  "dataset_rows": 1450,
+  "train_rows": 1160,
+  "test_rows": 290,
+  "train_positives": 149,
+  "test_positives": 37,
+  "features": [
+    "cycle",
+    "os1",
+    "os2",
+    "s2",
+    "s3",
+    "s4",
+    "s6",
+    "s7",
+    "s8",
+    "s9",
+    "s11",
+    "s12",
+    "s13",
+    "s14",
+    "s15",
+    "s17",
+    "s20",
+    "s21"
+  ],
+  "constant_columns_dropped": [
+    "os3",
+    "s1",
+    "s5",
+    "s10",
+    "s16",
+    "s18",
+    "s19"
+  ],
+  "test_split": "80/20, stratified, random_state=42",
+  "selection_rule": "Highest 5-fold CV accuracy; ROC-AUC breaks ties",
+  "deployed_model": "Random Forest",
+  "results": {
+    "Logistic Regression": {
+      "accuracy": 0.9621,
+      "precision": 0.7955,
+      "recall": 0.9459,
+      "f1": 0.8642,
+      "roc_auc": 0.9962,
+      "confusion_matrix": {
+        "TN": 244,
+        "FP": 9,
+        "FN": 2,
+        "TP": 35
+      },
+      "correct": 279,
+      "total": 290,
+      "cv_accuracy_mean": 0.9724,
+      "cv_accuracy_folds": [
+        0.9655,
+        0.9828,
+        0.9655,
+        0.9828,
+        0.9655
+      ]
+    },
+    "Decision Tree": {
+      "accuracy": 0.9862,
+      "precision": 0.9231,
+      "recall": 0.973,
+      "f1": 0.9474,
+      "roc_auc": 0.9806,
+      "confusion_matrix": {
+        "TN": 250,
+        "FP": 3,
+        "FN": 1,
+        "TP": 36
+      },
+      "correct": 286,
+      "total": 290,
+      "cv_accuracy_mean": 0.9862,
+      "cv_accuracy_folds": [
+        0.9828,
+        0.9966,
+        0.9862,
+        0.9897,
+        0.9759
+      ]
+    },
+    "Random Forest": {
+      "accuracy": 0.9793,
+      "precision": 0.8974,
+      "recall": 0.9459,
+      "f1": 0.9211,
+      "roc_auc": 0.9982,
+      "confusion_matrix": {
+        "TN": 249,
+        "FP": 4,
+        "FN": 2,
+        "TP": 35
+      },
+      "correct": 284,
+      "total": 290,
+      "cv_accuracy_mean": 0.9869,
+      "cv_accuracy_folds": [
+        0.9828,
+        0.9931,
+        0.9862,
+        0.9828,
+        0.9897
+      ]
+    }
+  },
+  "feature_importances": {
+    "s11": 0.1969,
+    "s4": 0.1474,
+    "s15": 0.1261,
+    "s21": 0.0975,
+    "s14": 0.0672,
+    "s7": 0.0669,
+    "s9": 0.0582,
+    "cycle": 0.0546,
+    "s12": 0.0528,
+    "s2": 0.0397,
+    "s17": 0.0264,
+    "s20": 0.0212,
+    "s3": 0.0157,
+    "s8": 0.0115,
+    "s13": 0.0082,
+    "os1": 0.0059,
+    "os2": 0.0038,
+    "s6": 0.0
+  }
+}
